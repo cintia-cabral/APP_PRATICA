@@ -10,14 +10,13 @@ st.header("Introduzindo os Elementos do Streamlit")
 
 menu = option_menu(
     menu_title="Menu",
-    options=["Inicio", "Grafico Estatistico", "Grafico Dinamico", "Widgts", "Formulario"],
+    options=["Inicio", "Grafico Estatistico", "Grafico Dinamico", "Widgets", "Formulario"],
     icons=["house", "bar-chart", "graph-up", "toggles", "bar-chart"],
     menu_icon="cast",
     default_index=0,
     orientation="horizontal"
 )
 
-#Função fora do if
 def carregar_dados(arquivo):
     try:
         df = pd.read_excel(arquivo)
@@ -28,11 +27,7 @@ def carregar_dados(arquivo):
 
 with st.sidebar:
     st.success("**UPLOAD DE DADOS**")
-    
-    dados = st.file_uploader(
-        "Carregue os dados",
-        type=["xlsx", "xls"]
-    )
+    dados = st.file_uploader("Carregue os dados", type=["xlsx", "xls"])
 
     if dados:
         df = carregar_dados(dados)
@@ -40,17 +35,23 @@ with st.sidebar:
         st.dataframe(df)
     else:
         st.info("Carregue um ficheiro Excel para começar")
-        
-if menu=="Widgts":
+
+# Widgets
+if menu == "Widgets":
     bt = st.button("Dê um clique!")
 
-if bt:
-    st.info(Clicaste num botão acima!")
+    if bt:
+        st.info("Clicaste num botão acima!")
 
-sd = st.slider("Nova o ponto do slider!", min_value=25,\
-              max_value=35,value=30, step=1
-              )
-    
-texto =  f"Eu tenho {sd} anos!"    
-st.success(texto)
+    sd = st.slider(
+        "Novo ponto do slider!",
+        min_value=25,
+        max_value=35,
+        value=30,
+        step=1
+    )
+
+    texto = f"Eu tenho {sd} anos!"
+    st.success(texto)
+
 
