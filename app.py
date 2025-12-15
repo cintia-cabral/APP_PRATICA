@@ -7,6 +7,7 @@ import time
 import re
 from datetime import date
 
+
 st.header("Indroduzindo os Elementos  do Steamlit")
 menu=option_menu(menu_title="Menu",
                  options=["Inicio", "Grafico Estatistico","Grafico Dinamico", "Widgts", "Formulario"],
