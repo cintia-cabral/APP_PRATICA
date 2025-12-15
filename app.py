@@ -37,10 +37,12 @@ with st.sidebar:
         st.info("Carregue um ficheiro Excel para começar")
 
 #INICIO
+# INICIO
 if menu == "Inicio":
-    with st.expander("**sobre o instituto nacionl de estatistica**")
-    st.write("acessse o site www.ine.cv")
-    st.image("INE.png")
+    with st.expander("**Sobre o Instituto Nacional de Estatística**"):
+        st.write("Acesse o site www.ine.cv")
+        st.image("INE.png")
+
 
 # Widgets
 if menu == "Widgets":
