@@ -14,20 +14,19 @@ menu = option_menu(
     orientation="horizontal"
 )
 
-
-# Função para carregar dados do Excel
-def carregar_dados(arquivo):
-    try:
-        df = pd.read_excel(arquivo)
-        return df
-    except Exception as e:
-        st.error(f"Erro ao carregar arquivo: {e}")
-        return pd.DataFrame()
-
 # Sidebar: upload de dados
 with st.sidebar:
     st.success("**UPLOAD DE DADOS**")
     dados = st.file_uploader("Carregue os dados", type=["xlsx", "xls"])
+
+# Função para carregar dados do Excel
+def carregar_dados(dados):
+    try:
+        df = pd.read_excel(dados)
+        return df
+    except  FileNotFoundError: 
+        return pd.DataFrame()
+
 
     if dados:
         df = carregar_dados(dados)
