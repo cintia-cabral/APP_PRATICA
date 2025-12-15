@@ -41,7 +41,7 @@ with st.sidebar:
 if menu == "Inicio":
     with st.expander("**Sobre o Instituto Nacional de Estatística**"):
         st.write("Acesse o site www.ine.cv")
-        st.image("INE.png")  # Certifique-se de que a imagem está na mesma pasta
+        st.image("INE.webp")  # Certifique-se de que a imagem está na mesma pasta
 
 # Widgets
 if menu == "Widgets":
