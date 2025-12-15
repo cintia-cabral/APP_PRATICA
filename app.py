@@ -36,6 +36,12 @@ with st.sidebar:
     else:
         st.info("Carregue um ficheiro Excel para começar")
 
+#INICIO
+if menu == "Inicio":
+    with st.expander("**sobre o instituto nacionl de estatistica**")
+    st.write("acessse o site www.ine.cv")
+    st.image("INE.png")
+
 # Widgets
 if menu == "Widgets":
     bt = st.button("Dê um clique!")
