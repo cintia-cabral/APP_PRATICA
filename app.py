@@ -28,9 +28,10 @@ with st.sidebar:
         df=pd.read_excel(dados)
         return df
       except FileNotFoundError:
-        return pd.DataFrame()
-        df = carregar_dados(dados)
-        st.table(df)
+          return pd.DataFrame()
+        
+      df = carregar_dados(dados)
+      st.table(df)
                 
   else:
         st.info("Carregue um ficheiro Excel para começar")
