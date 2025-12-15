@@ -61,5 +61,7 @@ if menu == "Widgets":
     st.success(texto)
 
 
-
+# Widgets
+if menu == "Widgets":
+    bt = st.button("Dê um clique!")
 
