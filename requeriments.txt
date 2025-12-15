@@ -1,3 +1,5 @@
 pandas
 steamlit
+streamlit-option-menu
+
 
