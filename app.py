@@ -1,9 +1,12 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import time
 import re
-#from streamlit_option_menu import option_menu
+fromn datetime import date
+
 st.header("Indroduzindo os Elementos  do Steamlit")
 menu=option_menu(menu_title="Menu",
                  options=["Inicio", "Grafico Estatistico","Grafico Dinamico", "Widgts", "Formulario"],
