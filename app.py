@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import time
 import re
-fromn datetime import date
+from datetime import date
 
 st.header("Indroduzindo os Elementos  do Steamlit")
 menu=option_menu(menu_title="Menu",
