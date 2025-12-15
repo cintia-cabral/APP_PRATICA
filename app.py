@@ -14,6 +14,7 @@ menu = option_menu(
     orientation="horizontal"
 )
 
+
 # Função para carregar dados do Excel
 def carregar_dados(arquivo):
     try:
